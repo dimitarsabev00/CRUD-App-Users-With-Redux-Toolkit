@@ -3,7 +3,7 @@ import * as ReactDOMClient from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Provider } from "react";
+import { Provider } from "react-redux";
 import store from "./features/store/store";
 const container = document.getElementById("root");
 // Create a root.
