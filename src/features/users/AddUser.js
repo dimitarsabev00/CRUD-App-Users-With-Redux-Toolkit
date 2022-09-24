@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 import AddUserButton from "../../components/AddUserButton";
 import TextField from "../../components/TextField";
 import { addUser } from "./userSlice";
@@ -20,7 +21,7 @@ const AddUser = () => {
     });
     dispatch(
       addUser({
-        id: "3",
+        id: uuidv4(),
         name: values.name,
         email: values.email,
       })
