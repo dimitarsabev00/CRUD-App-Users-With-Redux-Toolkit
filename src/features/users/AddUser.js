@@ -1,14 +1,22 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AddUserButton from "../../components/AddUserButton";
 import TextField from "../../components/TextField";
 
 const AddUser = () => {
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     name: "",
     email: "",
   });
 
-  const handleAddUser = () => {};
+  const handleAddUser = () => {
+    setValues({
+      name: "",
+      email: "",
+    });
+    navigate("/");
+  };
   return (
     <div className="mt-10 max-w-xl mx-auto">
       <TextField
