@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import UserList from "./features/users/UserList";
 
 function App() {
@@ -6,7 +7,17 @@ function App() {
       <h1 className="text-center font-bold text-2xl text-gray-700">
         UI-Add-Users-In-Collection-With-Redux-Toolkit
       </h1>
-      <UserList />
+      <Routes>
+        <Route path="/" element={<UserList />} />
+        <Route
+          path="*"
+          element={
+            <h1 className="text-center font-bold text-2xl text-gray-700 pt-10">
+              Error Page
+            </h1>
+          }
+        />
+      </Routes>
     </div>
   );
 }
