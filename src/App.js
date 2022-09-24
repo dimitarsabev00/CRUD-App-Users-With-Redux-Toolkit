@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import AddUser from "./features/users/AddUser";
 import UserList from "./features/users/UserList";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       </h1>
       <Routes>
         <Route path="/" element={<UserList />} />
+        <Route path="/add-user" element={<AddUser />} />
         <Route
           path="*"
           element={
