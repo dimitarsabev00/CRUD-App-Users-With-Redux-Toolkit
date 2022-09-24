@@ -1,9 +1,15 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import AddUserButton from "../../components/AddUserButton";
+import { deleteUser } from "./userSlice";
 
 const UserList = () => {
+  const dispatch = useDispatch();
   const users = useSelector((state) => state.users);
+
+  const hadleRemoveUser = (id) => {
+    dispatch(deleteUser({ id }));
+  };
   const renderCard = () =>
     users.map((user) => (
       <div
@@ -34,7 +40,7 @@ const UserList = () => {
             </button>
           </Link>
 
-          <button>
+          <button onClick={() => hadleRemoveUser(user.id)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
