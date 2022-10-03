@@ -1,4 +1,4 @@
-# UI-Add-Users-In-Collection-With-Redux-Toolkit
+# CRUD-App-Users-With-Redux-Toolkit
 
 ## Available Scripts
 
